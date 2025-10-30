@@ -214,7 +214,8 @@ service_times = [i.service_time for i in customers if i.departure_time != None]
 somme = 0.0
 for time in service_times :
    somme = somme + time
-busy_time = somme/simulation_time
+busy_time = somme/(simulation_time * k_servers)
 print(f"  busy time in system   : {busy_time:.2f}")
+
 
 
